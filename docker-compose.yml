@@ -1,0 +1,17 @@
+version: '3'
+services:
+  lalama:
+    build: .
+    environment:
+      API_KEY:                  ""
+      DEEPSEEK_API_KEY:         ""
+      GROK_API_KEY:             ""
+      GEMINI_API_KEY:           ""
+      DASHSCOPE_API_KEY:        ""
+      ZHIPUAI_API_KEY:          ""
+      USE_PROXY:                "False"
+      LLM_MODEL:                "deepseek-flash"
+      WEB_PORT:                 "12345"
+    network_mode: "host"
+    command: >
+      bash -c "python3 -u main.py"
