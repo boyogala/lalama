@@ -50,8 +50,6 @@ LaLaMa 已全面更新并内置国内外主流大模型最新接口（可在界�
 | **xAI (Grok)** | `grok-4.7`<br>`grok-4.3`<br>`grok-imagine-image-2.0`<br>`grok-build-0.1`<br>`grok-4.20-0309-reasoning` | `GROK_API_KEY` | 覆盖通用旗舰、代码构建、多模态与 2M 超长上下文深度推理 |
 | **Google (Gemini)** | `gemini-3.5-flash-lite`<br>`gemini-3.8-flash`<br>`gemini-3.1-pro-preview`<br>`gemini-pro-latest`<br>`gemini-flash-latest`<br>`gemini-4-argon` | `GEMINI_API_KEY` | 全面支持 1M 上下文窗口与多模态输入 |
 | **OpenAI** | `gpt-6-astra`<br>`gpt-6.1-sol`<br>`gpt-6-luna`<br>`gpt-5.6-sol`<br>`gpt-5.6-terra`<br>`gpt-5.6-luna` | `API_KEY` | 最新一代 GPT-6 与 GPT-5.6 全系列模型（1.05M 上下文窗口） |
-| **通义千问 (Qwen)** | `qwen-max`, `qwen-plus`, `qwen-turbo`<br>`dashscope-qwen3-14b`<br>`dashscope-qwen3-32b`<br>`dashscope-qwen3-235b-a22b` | `DASHSCOPE_API_KEY` | 阿里云百炼在线模型及 `qwen-local` 本地模型 |
-| **智谱 AI (GLM)** | `glm-4`, `glm-4v`, `glm-3-turbo`<br>`glm-4-plus`, `glm-4-air`, `glm-4-flash`<br>`chatglm3`, `chatglm4` | `ZHIPUAI_API_KEY` | 支持智谱在线 API 及本地 ChatGLM 部署 |
 | **其他兼容接口** | `claude-*`, `cohere-command-r-plus`, `llama2`<br>`one-api-*`, `vllm-*`, `ollama-*`, `openrouter-*` | 对应 API Key | 支持标准 OpenAI 兼容网关与本地推理引擎 |
 
 ---
