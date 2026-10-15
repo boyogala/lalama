@@ -190,3 +190,31 @@ lalama/
 ## 六、开源协议
 
 本项目遵循 **GPL-3.0** 开源协议。欢迎提交 Issue 或 Pull Request 共同完善 [LaLaMa](https://github.com/boyogala/lalama)！
+
+## 七、网络问题
+方案一：本机 Windows 使用代理推送（最快，若本地有代理软件）
+假设您的本地代理监听在 http://127.0.0.1:10808（本项目 config.py 中的代理设置），执行：
+cd C:\Users\boyogala\Desktop\gptacademic2lalama\lalama
+git config --global http.proxy http://127.0.0.1:10808
+git config --global https.proxy http://127.0.0.1:10808
+git push -u origin main
+推送成功后，可取消代理（以免影响其他命令）：
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+方案二：直接从 VPS 推送（推荐，利用 VPS 稳定的海外网络）
+因为 VPS 已经能正常访问 GitHub，我们可以在 VPS 上装 Git 并推送，全程不受本地 DNS 影响：
+# 1. SSH 登录 VPS
+ssh root@149.7.2.25
+
+# 2. 安装 Git
+apt update && apt install -y git
+
+# 3. 在 VPS 上初始化仓库并推送
+cd /root/lalama
+git init
+git branch -M main
+git add .
+git commit -m "Initial release of LaLaMa (Large Language Model for Academic)"
+git remote add origin https://github.com/boyogala/lalama.git
+git push -u origin main
+注意：VPS 上的 /root/lalama/config_private.py（内含您的真实 API Key）已被 .gitignore 忽略，不会被提交到 GitHub，您可以放心执行 git add .。
