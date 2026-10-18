@@ -40,10 +40,11 @@ EMBEDDING_MODEL = "text-embedding-3-small"
 # --------------- 以下配置可以优化体验 ---------------
 
 # 重新URL重新定向，实现更换API_URL的作用（常规情况下不要修改，但中华人民共和国大陆之内需要代理修改）
+# 如下设置的代理域名YOUR-DOMAIN，需要使用我的另一个项目[ai7proxy](https://github.com/boyogala/ai7proxy)
 #API_URL_REDIRECT = {}
 API_URL_REDIRECT = {
-"https://generativelanguage.googleapis.com/v1beta/models":"https://ai3proxy.894900.xyz/generativelanguage/v1beta/models",
-"https://api.x.ai/v1/chat/completions":"https://ai3proxy.894900.xyz/xai/v1/chat/completions"
+"https://generativelanguage.googleapis.com/v1beta/models":"https://YOUR-DOMAIN/generativelanguage/v1beta/models",
+"https://api.x.ai/v1/chat/completions":"https://YOUR-DOMAIN/xai/v1/chat/completions"
 }
 
 # 色彩主题, 可选 ["Default", "Chuanhu-Small-and-Beautiful", "High-Contrast"]
