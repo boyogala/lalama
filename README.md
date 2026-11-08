@@ -210,6 +210,8 @@ ssh root@149.7.2.25
 apt update && apt install -y git
 
 # 3. 在 VPS 上初始化仓库并推送
+
+```bash
 cd /root/lalama
 git init
 git branch -M main
@@ -217,4 +219,11 @@ git add .
 git commit -m "Initial release of LaLaMa (Large Language Model for Academic)"
 git remote add origin https://github.com/boyogala/lalama.git
 git push -u origin main
-注意：VPS 上的 /root/lalama/config_private.py（内含您的真实 API Key）已被 .gitignore 忽略，不会被提交到 GitHub，您可以放心执行 git add .。
+```
+
+注意：VPS 上的 /root/lalama/config_private.py（内含您的真实 API Key）已被 .gitignore 忽略，不会被提交到 GitHub，您可以放心执行 
+
+```bash
+git add .。
+```
+
